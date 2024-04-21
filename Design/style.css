@@ -1,0 +1,198 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font Face Declaration */
+@font-face {
+    font-family: 'HYWenHei-85W';
+    src: url('genshin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply Custom Font to Elements */
+body {
+    font-family: 'HYWenHei-85W', Arial, sans-serif;
+    background-color: #0e0e0e; /* Dark background */
+    color: #fff; /* White text */
+}
+
+/* Slider Styles */
+.swiper-slide img {
+    width: 100%; /* Ensure the image fills the swiper slide */
+    height: 100%; /* Ensure the image fills the swiper slide */
+    object-fit: cover; /* Fill the image while preserving its aspect ratio */
+    transition: transform 0.3s ease; /* Added transition effect */
+}
+
+.swiper-slide img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Custom Swiper Styles */
+.swiper-container.swiper-custom {
+    border: 5px solid #727272; /* Gray border */                
+    border-radius: 15px; /* Rounded corners */
+    position: relative;
+    overflow: hidden; /* Hide overflowing content within the swiper */
+    height: 89.2vh; /* Adjust the height as needed */
+}
+
+/* Optional: Style pagination bullets */
+.swiper-pagination-bullet {
+    width: 10px; /* Bullet width */
+    height: 10px; /* Bullet height */
+    background-color: #cd28a4; /* Pink bullet color */
+    border-radius: 50%; /* Rounded bullets */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #ff00b7; /* Active pink bullet color */
+}
+
+/* Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-container h1 {
+    font-size: 1.5rem;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px; /* Increased padding */
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 10px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color .2s ease-in-out;
+}
+
+.menu li a:hover {
+    background-color: #5f43b2; /* Light blue highlight color */
+}
+
+.signin-button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Welcome */
+.hero {
+
+    color: #fff;
+    padding: 100px;
+    text-align: center;
+}
+
+.hero h1,
+.hero p {
+    background: linear-gradient(to right, #ff00b7, #28cdcd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;   
+}
+
+/* Highlights */
+.highlights {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Last footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    /* Hide menu by default */
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        background-color: #031f1f;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    /* Show menu when the button is clicked */
+    .show-menu {
+        display: flex;
+    }
+
+    /* Add margin to menu items */
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
+/* Additional styles for desktop view */
+@media (min-width: 769px) {
+    .menu {
+        display: flex !important;
+        align-items: center;
+        background-color: transparent;
+        width: auto;
+    }
+
+    .menu li {
+        margin-right: 20px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Additional styles for the header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin-left: 10px;
+}
